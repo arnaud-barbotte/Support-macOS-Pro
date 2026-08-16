@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultant indépendant en France - Expertise conseil et accompagnement stratégique">
+    <title>Votre Nom | Consultant Indépendant</title>
+    <style>
+        /* Variables */
+        :root {
+            --primary: #6d4aff;
+            --secondary: #1a1a2e;
+            --accent: #00d4ff;
+            --text: #333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: var(--text); }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(109,74,255,0.3); }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+        }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-content p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* Sections */
+        section { padding: 6rem 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--secondary); }
+        
+        /* About */
+        .about { background: var(--bg-light); }
+        .about-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            max-width: 1200px; 
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .service-card h3 { color: var(--secondary); margin-bottom: 1rem; font-size: 1.5rem; }
+        .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        /* Contact */
+        .contact { background: var(--secondary); color: white; }
+        .contact .section-title { color: white; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-info div { margin-bottom: 1.5rem; }
+        .contact-info label { color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.5rem; }
+        
+        /* Footer */
+        footer { background: var(--secondary); color: white; padding: 3rem 5%; text-align: center; }
+        footer p { opacity: 0.8; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .service-card { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Votre Nom</div>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À Propos</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="#contact" class="cta-button">Me Contacter</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Consultant en Stratégie & Transformation Digitale</h1>
+            <p>Accompagnement personnalisé pour entreprises françaises. Expertise terrain, résultats concrets.</p>
+            <a href="#contact" class="cta-button">Discutons de votre projet</a>
+        </div>
+    </section>
+
+    <!-- À Propos -->
+    <section class="about" id="apropos">
+        <h2 class="section-title">Qui Suis-Je ?</h2>
+        <div class="about-grid">
+            <div>
+                <p>Avec plus de 10 ans d'expérience dans le conseil et l'accompagnement d'entreprises, je specialize dans la transformation digitale et l'optimisation des processus métiers.</p>
+                <br>
+                <p>Mon approche est pragmatique : comprendre vos enjeux, identifier les leviers de croissance, et accompagner votre équipe vers l'exécution.</p>
+                <br>
+                <p><strong>Expertises clés :</strong> Stratégie digitale, organisation opérationnelle, pilotage de projets complexes.</p>
+            </div>
+            <div style="background: var(--primary); height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
+                <p>Votre Photo Ici</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2 class="section-title">Mes Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Conseil Stratégique</h3>
+                <p>Audit de situation, définition de feuille de route, priorisation des initiatives à fort impact business.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Transformation Digitale</h3>
+                <p>Modernisation de vos outils, intégration de nouvelles technologies, formation de vos équipes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Pilotage de Projets</h3>
+                <p>Management de projets transverses, coordination des parties prenantes, livraison dans les délais.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Accompagnement Opérationnel</h3>
+                <p>Optimisation des processus, résolution de blocages, montée en compétences de vos collaborateurs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div>
+                    <label>Email</label>
+                    <p>contact@votredomaine.fr</p>
+                </div>
+                <div>
+                    <label>Téléphone</label>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+                <div>
+                    <label>Localisation</label>
+                    <p>France • Téléconsultation disponible</p>
+                </div>
+                <div>
+                    <label>Zone d'intervention</label>
+                    <p>Île-de-France et national</p>
+                </div>
+            </div>
+            <div>
+                <form action="mailto:votre@email.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Votre nom" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: none;" required>
+                    <input type="email" name="email" placeholder="Votre email" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: none;" required>
+                    <textarea name="message" placeholder="Votre message" rows="5" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: none; resize: vertical;" required></textarea>
+                    <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Votre Nom. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Mentions légales | Politique de confidentialité</p>
+    </footer>
+</body>
+</html>
